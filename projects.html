@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-sans" id="app">
+ <!-- Navigation --> 
+<nav class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="font-bold text-lg">Developer Portfolio</a>
+        <ul class="flex space-x-4">
+            <li><a href="index.html" class="hover:text-gray-200">Home</a></li>
+            <li><a href="about.html" class="hover:text-gray-200">About</a></li>
+            <li><a href="projects.html" class="hover:text-gray-200">Projects</a></li>
+            <li><a href="contact.html" class="hover:text-gray-200">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+ <!-- Projects Section --> 
+<section id="projects" class="py-16">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Projects</h2>
+            <div v-for="(project, index) in projects" :key="index" class="bg-white p-6 rounded-lg shadow-md">
+                <img src="olangers.png" :alt="project.title" class="mb-4 rounded-md">
+                 <h3 class="text-xl font-bold mb-2">Olango Reserved Hub</h3>
+                     <p>description: 'The Olango Reserve Hub system simplifies hotel room reservations, offering convenience and flexibility for users. By automating the booking process, it reduces errors and administrative workload. This user-friendly system enhances customer satisfaction and loyalty while collecting valuable data for marketing and service improvements. Users register to access personalized bookings, and can manage their reservations easily through their accounts.,
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Footer --> 
+<footer class="bg-gray-800 text-white py-4 text-center">
+    <div class="container mx-auto">
+        <p>&copy; 2024 Developer Portfolio. All rights reserved.</p>
+    </div>
+    
+</footer>
+
+<!-- Vue.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            projects: [
+                {
+                    title: 'Olango Reserve Hub',
+                    description: 'The Olango Reserve Hub system simplifies hotel room reservations, offering convenience and flexibility for users. By automating the booking process, it reduces errors and administrative workload. This user-friendly system enhances customer satisfaction and loyalty while collecting valuable data for marketing and service improvements. Users register to access personalized bookings, and can manage their reservations easily through their accounts.',
+                    imageUrl: 'olango.jpg'
+                },
+
+            ]
+        }
+    });
+</script>
+
+</body>
+</html>
